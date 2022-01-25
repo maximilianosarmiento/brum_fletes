@@ -2,10 +2,10 @@ let formDatos = document.getElementById("formDatos");
 let horas;
 let carga;
 let divResultados = document.getElementById("divResultados");
-let fletes = [];
 let parrafoError = document.getElementById("parrafoError");
 let reservas = [];
 
+// Botón de la barra lateral ---------------------------------------------------
 
 $(`.btnBar`).click(() =>{
     $(`.containerBar`).toggleClass("active");
@@ -17,12 +17,14 @@ formDatos.addEventListener("submit", (e) =>{
     let carga = document.getElementById("carga").value;
     let resultados = [];
 
+    // Ciclo con condicional para la búsqueda -------------------------------------------
     for (let i = 0; i < fletes.length; i++) {
         if (fletes[i].cargaMaxima >= carga){
             resultados.push(fletes[i]);
         }
     }
     
+    // Impresión de los resultados de la bùsqueda -----------------------------
     divResultados.innerHTML = ""
     if(divResultados.children.length == 0 && resultados.length != 0){
         divResultados.innerHTML = ""
@@ -121,13 +123,6 @@ formDatos.addEventListener("submit", (e) =>{
         </div>`
     }
     
-  
-
-    resultados.forEach( resultado =>{
-        $(`#botonPrecio${resultado.id}`).click(() =>{
-            $(`.parrafoPrecio${resultado.id}`).show().append(`El precio estimado según las horas ingresadas es de: $${resultado.precioHora*horas}`)
-        })
-    })
     
     // UTILIZO POST PARA ENVIAR LA RESERVA Y GUARDAR EN LOCAL STORAGE ------------------------------------
     resultados.forEach((resultado) =>{ 
@@ -141,10 +136,11 @@ formDatos.addEventListener("submit", (e) =>{
         })
     })
 
+    //BOTÓN PARA ELIMINAR LA RESERVA, DEL ALMACENAMIENTO, DEL DOM Y DEL ARRAY DE RESULTADOS. --------------
     resultados.forEach((resultado) => {
         document.getElementById(`botonEliminar${resultado.id}`).addEventListener("click", () => {
 
-            $(`#resultado${resultado.id}`).fadeOut("slow"); // EFECTO CON JQUERY.----------------------
+            $(`#resultado${resultado.id}`).fadeOut("slow"); // APLICO EFECTO CON JQUERY.----------------------
             
             reservas.splice(resultado, 1);
             localStorage.setItem(`reservas`, JSON.stringify(reservas));
