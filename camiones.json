@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "modelo": "Pick Up 100",
+    "cargaMaxima": 1000,
+    "precioHora": 2000,
+    "choferDesignado": {
+                        "id": 1,
+                        "nombre": "Maximiliano",
+                        "apellido": "Sarrmiento",
+                        "dni": 12345678,
+                        "añosExperiencia": 2
+                        }
+  },
+  {
+    "id": 2,
+    "modelo": "Pick Up 150",
+    "cargaMaxima": 1500,
+    "precioHora": 2300,
+    "choferDesignado": {
+                        "id": 2,
+                        "nombre": "Gonzalo",
+                        "apellido": "Rodriguez",
+                        "dni": 87654321,
+                        "añosExperiencia": 5
+                        }
+  },
+  {
+    "id": 3,
+    "modelo": "Camión 2 ambientes",
+    "cargaMaxima": 3500,
+    "precioHora": 2800,
+    "choferDesignado": {
+                        "id": 3,
+                        "nombre": "Francisco",
+                        "apellido": "Pugh",
+                        "dni": 12365478,
+                        "añosExperiencia": 7
+                        }
+  },
+  {
+    "id": 4,
+    "modelo": "Camión 4 ambientes",
+    "cargaMaxima": 4500,
+    "precioHora": 3200,
+    "choferDesignado": {
+                        "id": 4,
+                        "nombre": "Chano",
+                        "apellido": "Charpentier",
+                        "dni": 9889012,
+                        "añosExperiencia": 4
+                        }
+  }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ab94807e6b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/Brum Icono.png"" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Brum | Inicio</title>
+</head>
+<body>
+
+    <!--------------------------MENÚ DE NAVEGACIÓN------------------------------------->
+    <header>
+        <div class="containerBar">
+            <button class="btn btnBar" onclick="this.blur();"><i class="fas fa-bars"></i></button>
+            
+            <div class="containerLista">
+                <a href="./index.html" id="linkLogo"><img src="./img/Brum Logo.png" alt="Logo" class="logo"></a>
+                <ul class="lista">
+                    <li class="item"><a href="index.html">Home</a></li>
+                    <li class="item"><a href="#">¿Quienes somos?</a></li>
+                    <li class="item"><a href="#">Contactános</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    
+    <!--------------------------CONTENIDO DE LA PÁGINA------------------------------------->
+    <main class="main">
+        
+        <div class="mainContainer">
+
+            <h1 class="titulo">¡Encontrá el flete perfecto para tu traslado!</h1>
+
+            
+
+            <!--------------------------FORMULARIO------------------------------------->
+            <form id="formDatos">
+                <div class="mb-3">
+                    <label for="horas" class="form-label">¿Cuantas horas aproxima necesitar el servicio?</label>
+                    <input type="number" class="form-control" id="horas" placeholder="Ingrese las horas en números" name="horas">
+                </div>
+
+                <div class="mb-3">
+                    <label for="carga" class="form-label">Ingrese un aproximado del peso a trasladar en KG</label>
+                    <input type="number" class="form-control" id="carga" placeholder="Peso aproximado en KG" name="carga">
+                </div>
+
+                <button type="submit" class="btn botonForm" onclick="this.blur();">Buscar Flete</button>
+            </form>
+
+            
+            <div id="divResultados" class="row"></div>
+            <p id="parrafoError"></p>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./camiones.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

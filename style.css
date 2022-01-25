@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+/*------------------Estilos de la barra lateral----------------*/
+
+.containerBar{
+    background-color: whitesmoke;
+    box-shadow: 2px 0px 10px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    display: flex;
+    left: -260px;
+    transition: all 500ms linear;
+    z-index: 100;
+    border-right: 5px solid orange;
+}
+.containerBar.active{
+    left: 0;
+}
+
+#linkLogo{
+    align-self: center;
+}
+.logo{
+    width: 200px;
+    align-self: center;
+}
+
+.containerLista{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.btnBar{
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 10px;
+    color: white;
+    border: 1.5px solid whitesmoke;
+    background-color:orange;
+    z-index: 101;
+}
+.btnBar:hover{
+    background-color:rgb(247, 141, 3);
+    color: white;
+    border: solid 2px white;
+
+}
+
+.lista{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem !important;
+    
+}
+.lista li{
+    margin: 9px 0 !important;
+    width: 14.5em;
+    height: 3em;
+    border-left: 2px solid orange;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li:hover{
+    background-color: orange;
+    color: whitesmoke;
+    transition: 400ms;
+    
+}
+.lista a{
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.lista a:hover{
+    color: whitesmoke;
+}
+
+/*----------------Estilos del main----------------*/
+body{
+    background-image:url(./img/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+h1{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;    
+    background-color: orange;
+    border-bottom: 5px solid white;
+    width: 100%;
+    height: 4rem;
+}
+#formDatos{
+    width: 60%;
+    margin: 6rem auto;
+    background-color:rgba(255, 166, 0, 0.418);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+}
+
+.botonForm{
+    background-color: orange;
+    color:white;
+    border-color: white;
+}
+.botonForm:hover{
+    background-color:rgb(247, 141, 3);
+    color:white;
+    font-weight: bold;
+    border: 2.5px solid white;
+    transition: 200ms;
+
+}
+
+/*----------------------Estilos cards----------------------*/
+
+.row{
+    justify-content: center;
+}
+.card, .modal-content{
+    border-radius: 20px;
+    border:3px solid orange;
+}
+.btnCard{
+    margin: 1px;
+}
+.modal-title{
+    color: orange;
+}
+.card:hover{
+    box-shadow: 3px 0px 10px 3px rgba(0, 0, 0, 0.295);
+    transition: 200ms;
+    border: 4px solid orange;
+}
+.modalChofer{
+    position: absolute;
+}
+#containerAlerta{
+    width: 40%;
+    background-color: orange;
+    border: 5px solid white;
+    border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    align-content: center;
+}
+#parrafoAlerta{
+    color: white;
+    text-align: center;
+    
+}
+
